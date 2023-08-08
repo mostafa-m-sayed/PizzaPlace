@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		063FC9B22A80509B005472D2 /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063FC9B12A80509B005472D2 /* OrderView.swift */; };
+		0665DE302A8051DD00D397C3 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0665DE2F2A8051DD00D397C3 /* MenuView.swift */; };
+		0665DE322A8052CA00D397C3 /* MenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0665DE312A8052CA00D397C3 /* MenuItemView.swift */; };
+		0665DE342A8052E700D397C3 /* MenuRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0665DE332A8052E700D397C3 /* MenuRowView.swift */; };
+		0665DE362A8052FE00D397C3 /* OrderRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0665DE352A8052FE00D397C3 /* OrderRowView.swift */; };
+		0665DE382A80531B00D397C3 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0665DE372A80531B00D397C3 /* HeaderView.swift */; };
+		0665DE3A2A81895500D397C3 /* RatingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0665DE392A81895500D397C3 /* RatingsView.swift */; };
+		0665DE3C2A82E2D600D397C3 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0665DE3B2A82E2D600D397C3 /* Colors.xcassets */; };
 		06D74AE02A7D4ADE0083433E /* PizzaPlaceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D74ADF2A7D4ADE0083433E /* PizzaPlaceApp.swift */; };
 		06D74AE22A7D4ADE0083433E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D74AE12A7D4ADE0083433E /* ContentView.swift */; };
 		06D74AE42A7D4AE00083433E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06D74AE32A7D4AE00083433E /* Assets.xcassets */; };
@@ -14,6 +22,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		063FC9B12A80509B005472D2 /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
+		0665DE2F2A8051DD00D397C3 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		0665DE312A8052CA00D397C3 /* MenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemView.swift; sourceTree = "<group>"; };
+		0665DE332A8052E700D397C3 /* MenuRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuRowView.swift; sourceTree = "<group>"; };
+		0665DE352A8052FE00D397C3 /* OrderRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderRowView.swift; sourceTree = "<group>"; };
+		0665DE372A80531B00D397C3 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		0665DE392A81895500D397C3 /* RatingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingsView.swift; sourceTree = "<group>"; };
+		0665DE3B2A82E2D600D397C3 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		06D74ADC2A7D4ADE0083433E /* PizzaPlace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PizzaPlace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06D74ADF2A7D4ADE0083433E /* PizzaPlaceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaPlaceApp.swift; sourceTree = "<group>"; };
 		06D74AE12A7D4ADE0083433E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,7 +69,15 @@
 			children = (
 				06D74ADF2A7D4ADE0083433E /* PizzaPlaceApp.swift */,
 				06D74AE12A7D4ADE0083433E /* ContentView.swift */,
+				0665DE392A81895500D397C3 /* RatingsView.swift */,
+				063FC9B12A80509B005472D2 /* OrderView.swift */,
+				0665DE2F2A8051DD00D397C3 /* MenuView.swift */,
+				0665DE312A8052CA00D397C3 /* MenuItemView.swift */,
+				0665DE332A8052E700D397C3 /* MenuRowView.swift */,
+				0665DE352A8052FE00D397C3 /* OrderRowView.swift */,
+				0665DE372A80531B00D397C3 /* HeaderView.swift */,
 				06D74AE32A7D4AE00083433E /* Assets.xcassets */,
+				0665DE3B2A82E2D600D397C3 /* Colors.xcassets */,
 				06D74AE52A7D4AE00083433E /* Preview Content */,
 			);
 			path = PizzaPlace;
@@ -125,6 +149,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0665DE3C2A82E2D600D397C3 /* Colors.xcassets in Resources */,
 				06D74AE72A7D4AE00083433E /* Preview Assets.xcassets in Resources */,
 				06D74AE42A7D4AE00083433E /* Assets.xcassets in Resources */,
 			);
@@ -137,8 +162,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				063FC9B22A80509B005472D2 /* OrderView.swift in Sources */,
+				0665DE302A8051DD00D397C3 /* MenuView.swift in Sources */,
 				06D74AE22A7D4ADE0083433E /* ContentView.swift in Sources */,
 				06D74AE02A7D4ADE0083433E /* PizzaPlaceApp.swift in Sources */,
+				0665DE3A2A81895500D397C3 /* RatingsView.swift in Sources */,
+				0665DE342A8052E700D397C3 /* MenuRowView.swift in Sources */,
+				0665DE362A8052FE00D397C3 /* OrderRowView.swift in Sources */,
+				0665DE322A8052CA00D397C3 /* MenuItemView.swift in Sources */,
+				0665DE382A80531B00D397C3 /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
