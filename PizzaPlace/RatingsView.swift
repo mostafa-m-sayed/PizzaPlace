@@ -11,7 +11,7 @@ struct RatingsView: View {
     var rating: Int
     var body: some View {
         HStack {
-            ForEach(1...5, id: \.self) { item in
+            ForEach(1...6, id: \.self) { item in
                 Image(systemName: item <= rating ? "fork.knife.circle.fill" : "circle")
             }
         }

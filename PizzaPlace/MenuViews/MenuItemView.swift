@@ -8,15 +8,18 @@
 import SwiftUI
 
 struct MenuItemView: View {
+    @State private var addedItem = false
+    @Binding var selectedItem: MenuItem
+    @ObservedObject var orders: OrderModel
     var body: some View {
         VStack {
             HStack {
-                Text("Margherita Pizza Place")
+                Text(selectedItem.name)
                     .font(.title)
                     .fontWeight(.semibold)
                     .foregroundStyle(.ultraThickMaterial)
                     .padding(.leading)
-                if let image = UIImage(named: "0_lg") {
+                if let image = UIImage(named: "\(selectedItem.id)_lg") {
                     Image(uiImage: image)
                         .resizable()
                         .scaledToFit()
@@ -35,16 +38,38 @@ struct MenuItemView: View {
             
             VStack(alignment: .leading) {
                 ScrollView {
-                    Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut urna ex, vehicula sed porta sit amet, faucibus id sapien. Maecenas pharetra, urna id efficitur luctus, orci metus sagittis magna, a lobortis turpis dolor quis lorem. Phasellus eleifend risus eros, ut sollicitudin sapien tempor at. In pretium pulvinar pellentesque. Vivamus pretium.")
+                    Text(selectedItem.description)
                         .font(.custom("Georgia", size: 18, relativeTo: .body))
                 }
             }
+            HStack() {
+                Button {
+                    addedItem = true
+                    orders.addOrder(selectedItem, quantity: 1)
+                } label: {
+                    Spacer()
+                    Text(selectedItem.price, format: .currency(code: "USD"))
+                        
+                    Image(systemName:  addedItem ?
+                          "cart.fill.badge.plus": "cart.badge.plus")
+                    Spacer()
+                }
+                .disabled(selectedItem.id < 0)
+                .padding()
+                .foregroundColor(.white)
+                .bold()
+                .background(.red, in: Capsule())
+                .shadow(radius: 3)
+                .frame(maxWidth: .infinity)
+                .padding(5)
+            }
+           
         }
     }
 }
 
 struct MenuItemView_Previews: PreviewProvider {
     static var previews: some View {
-        MenuItemView()
+        MenuItemView(selectedItem: .constant(testMenuItem), orders: OrderModel())
     }
 }
