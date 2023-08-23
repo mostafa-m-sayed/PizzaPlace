@@ -10,6 +10,9 @@
 		061733412A8C1415005BCD93 /* StatusBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061733402A8C1415005BCD93 /* StatusBarView.swift */; };
 		061733452A8C2C10005BCD93 /* OrderItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061733442A8C2C10005BCD93 /* OrderItemView.swift */; };
 		063FC9B22A80509B005472D2 /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063FC9B12A80509B005472D2 /* OrderView.swift */; };
+		06551CEA2A94316E00081CA2 /* MenuItemTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06551CE92A94316E00081CA2 /* MenuItemTileView.swift */; };
+		06551CED2A9431AA00081CA2 /* MenuGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06551CEC2A9431AA00081CA2 /* MenuGridView.swift */; };
+		06551CEF2A95673600081CA2 /* FavoriteTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06551CEE2A95673600081CA2 /* FavoriteTileView.swift */; };
 		0665DE302A8051DD00D397C3 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0665DE2F2A8051DD00D397C3 /* MenuView.swift */; };
 		0665DE322A8052CA00D397C3 /* MenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0665DE312A8052CA00D397C3 /* MenuItemView.swift */; };
 		0665DE342A8052E700D397C3 /* MenuRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0665DE332A8052E700D397C3 /* MenuRowView.swift */; };
@@ -31,6 +34,9 @@
 		061733402A8C1415005BCD93 /* StatusBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarView.swift; sourceTree = "<group>"; };
 		061733442A8C2C10005BCD93 /* OrderItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItemView.swift; sourceTree = "<group>"; };
 		063FC9B12A80509B005472D2 /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
+		06551CE92A94316E00081CA2 /* MenuItemTileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemTileView.swift; sourceTree = "<group>"; };
+		06551CEC2A9431AA00081CA2 /* MenuGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuGridView.swift; sourceTree = "<group>"; };
+		06551CEE2A95673600081CA2 /* FavoriteTileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteTileView.swift; sourceTree = "<group>"; };
 		0665DE2F2A8051DD00D397C3 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		0665DE312A8052CA00D397C3 /* MenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemView.swift; sourceTree = "<group>"; };
 		0665DE332A8052E700D397C3 /* MenuRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuRowView.swift; sourceTree = "<group>"; };
@@ -63,6 +69,7 @@
 		061733422A8C1424005BCD93 /* MenuViews */ = {
 			isa = PBXGroup;
 			children = (
+				06551CEB2A94319800081CA2 /* MenuGrid */,
 				0665DE2F2A8051DD00D397C3 /* MenuView.swift */,
 				0665DE312A8052CA00D397C3 /* MenuItemView.swift */,
 				0665DE332A8052E700D397C3 /* MenuRowView.swift */,
@@ -78,6 +85,16 @@
 				061733442A8C2C10005BCD93 /* OrderItemView.swift */,
 			);
 			path = OrderViews;
+			sourceTree = "<group>";
+		};
+		06551CEB2A94319800081CA2 /* MenuGrid */ = {
+			isa = PBXGroup;
+			children = (
+				06551CEE2A95673600081CA2 /* FavoriteTileView.swift */,
+				06551CE92A94316E00081CA2 /* MenuItemTileView.swift */,
+				06551CEC2A9431AA00081CA2 /* MenuGridView.swift */,
+			);
+			path = MenuGrid;
 			sourceTree = "<group>";
 		};
 		069EA0862A899273000028B5 /* Model Code */ = {
@@ -206,6 +223,7 @@
 			files = (
 				063FC9B22A80509B005472D2 /* OrderView.swift in Sources */,
 				0665DE302A8051DD00D397C3 /* MenuView.swift in Sources */,
+				06551CEF2A95673600081CA2 /* FavoriteTileView.swift in Sources */,
 				069EA08B2A899273000028B5 /* OrderModel.swift in Sources */,
 				06D74AE22A7D4ADE0083433E /* ContentView.swift in Sources */,
 				06D74AE02A7D4ADE0083433E /* PizzaPlaceApp.swift in Sources */,
@@ -216,8 +234,10 @@
 				0665DE362A8052FE00D397C3 /* OrderRowView.swift in Sources */,
 				069EA08E2A899273000028B5 /* MenuModel.swift in Sources */,
 				061733412A8C1415005BCD93 /* StatusBarView.swift in Sources */,
+				06551CED2A9431AA00081CA2 /* MenuGridView.swift in Sources */,
 				069EA08C2A899273000028B5 /* MenuItem.swift in Sources */,
 				0665DE322A8052CA00D397C3 /* MenuItemView.swift in Sources */,
+				06551CEA2A94316E00081CA2 /* MenuItemTileView.swift in Sources */,
 				0665DE382A80531B00D397C3 /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

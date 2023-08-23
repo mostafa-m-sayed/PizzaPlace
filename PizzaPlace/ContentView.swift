@@ -12,12 +12,13 @@ struct ContentView: View {
     @StateObject var orders: OrderModel = OrderModel()
     @State private var showOrders: Bool = false
     @State private var selectedItem: MenuItem = noMenuItem
+    @State var isGrid = false
     var body: some View {
         VStack {
             HeaderView()
                 .shadow(radius: 5)
                 .environment(\.colorScheme, .light)
-            StatusBarView(orders: orders, showOrders: $showOrders)
+            StatusBarView(orders: orders, showOrders: $showOrders, isGrid: $isGrid)
             .font(.title2)
             .foregroundStyle(.white)
             if showOrders {
@@ -28,7 +29,11 @@ struct ContentView: View {
                     .padding(5)
                     .background(.thinMaterial)
                     .cornerRadius(10)
-                MenuView(menu: menu, selectedItem: $selectedItem)
+                if isGrid {
+                    MenuGridView(menu: menu, favourites: [], selectedItem: $selectedItem)
+                } else {
+                    MenuView(menu: menu, selectedItem: $selectedItem)
+                }
             }
             Spacer()
         }
