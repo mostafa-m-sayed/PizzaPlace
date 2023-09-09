@@ -14,28 +14,41 @@ struct ContentView: View {
     @State private var selectedItem: MenuItem = noMenuItem
     @State var isGrid = false
     var body: some View {
-        VStack {
-            HeaderView()
-                .shadow(radius: 5)
-                .environment(\.colorScheme, .light)
-            StatusBarView(orders: orders, showOrders: $showOrders, isGrid: $isGrid)
-            .font(.title2)
-            .foregroundStyle(.white)
-            if showOrders {
+        TabView {
+            VStack {
+                HeaderView()
+                    .shadow(radius: 5)
+                    .environment(\.colorScheme, .light)
+                StatusBarView(orders: orders, showOrders: $showOrders, isGrid: $isGrid)
+                    .font(.title2)
+                    .foregroundStyle(.white)
+//                MenuItemView(selectedItem: $selectedItem, orders: orders)
+//                    .padding(5)
+//                    .background(.thinMaterial)
+//                    .cornerRadius(10)
+//                if isGrid {
+//                    MenuGridView(menu: menu, favourites: [], selectedItem: $selectedItem)
+//                } else {
+//                    MenuView(menu: menu, selectedItem: $selectedItem)
+//                }
+                MenuViewSplit(menu: menu)
+            }.tabItem {
+                Label("Menu", systemImage: "list.bullet")
+            }
+            VStack {
+                HeaderView()
+                    .shadow(radius: 5)
+                    .environment(\.colorScheme, .light)
+                StatusBarView(orders: orders, showOrders: $showOrders, isGrid: $isGrid)
+                    .font(.title2)
+                    .foregroundStyle(.white)
+                //            if showOrders {
                 OrderView(orders: orders)
                     .cornerRadius(10)
-            } else {
-                MenuItemView(selectedItem: $selectedItem, orders: orders)
-                    .padding(5)
-                    .background(.thinMaterial)
-                    .cornerRadius(10)
-                if isGrid {
-                    MenuGridView(menu: menu, favourites: [], selectedItem: $selectedItem)
-                } else {
-                    MenuView(menu: menu, selectedItem: $selectedItem)
-                }
+            }.tabItem {
+                Label("Order", systemImage: "cart")
             }
-            Spacer()
+            
         }
         .padding()
         .background(.linearGradient(colors: [.cyan, Color("Surf"), Color("Sky"), .white], startPoint: .topLeading, endPoint: .bottom))
